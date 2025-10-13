@@ -54,13 +54,13 @@ Includes roles for realistic SOC access control:
 | ![Impersonation](./screenshots/06_Security_Incident_Form(Filled_Impersonating_Test_User).png) | Impersonation showing Test User view |
 | ![List View](./screenshots/07_Security_Incident_List_View.png) | List view summarizing all security incidents |
 
-*(More screenshots such as dashboards or reports can be added later.)*
+*(More screenshots such as dashboards or reports to be added later.)*
 
 ---
 
 ## 🛠 Next Steps (Work in Progress)
 
-Planned enhancements to make the app more realistic and recruiter-ready:
+Planned enhancements to make the app more realistic and practical:
 
 - 🔒 **Access Controls (ACLs)** → SOC Analyst vs SOC Manager permissions  
 - 📊 **Reports & Dashboards** → e.g., *Incidents by Attack Type*, *Incidents by Priority*  

@@ -53,8 +53,11 @@ Includes roles for realistic SOC access control:
 | ![Filled Form](./screenshots/05_Security_Incident_Form(Filled).png) | Fully populated example record |
 | ![Impersonation](./screenshots/06_Security_Incident_Form(Filled_Impersonating_Test_User).png) | Impersonation showing Test User view |
 | ![List View](./screenshots/07_Security_Incident_List_View.png) | List view summarizing all security incidents |
+| ![SOC Incident Overview Dashboard](./screenshots/08_SOC_Incident_Overview_Dashboard.png) | Custom dashboard showing trends, attack types, severity, lifecycle status, team resolution metrics, and open critical incidents |
 
-*(More screenshots such as dashboards or reports to be added later.)*
+## 🚧 Planned Enhancements
+
+Future improvements may include Flow Designer automation, additional incident handling workflows, enhanced reporting, and more advanced logic to simulate a fuller SOC incident response process inside ServiceNow.
 
 ---
 

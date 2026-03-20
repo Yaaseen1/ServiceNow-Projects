@@ -40,6 +40,15 @@ Includes roles for realistic SOC access control:
 - **SOC Manager**
 - **Security Incident User**
 
+### 📊 Dashboard & Reporting
+Created a custom SOC dashboard to visualize:
+- Incident detection trends
+- Attack type distribution
+- Severity breakdown
+- Incident lifecycle status
+- Resolved incidents by SOC team
+- Open critical incidents
+  
 ---
 
 ## 📸 Screenshots (Current)
@@ -57,18 +66,23 @@ Includes roles for realistic SOC access control:
 
 ## 🚧 Planned Enhancements
 
-Future improvements may include Flow Designer automation, additional incident handling workflows, enhanced reporting, and more advanced logic to simulate a fuller SOC incident response process inside ServiceNow.
+Future improvements may include:
+- Flow Designer automation for notifications, escalations, or task handling
+- Additional incident workflows and automation logic
+- Access controls (ACLs) for more granular role-based permissions
+- Expanded SOC-style reporting and response functionality
 
 ---
 
-## 🛠 Next Steps (Work in Progress)
+## 🛠 Next Steps
 
-Planned enhancements to make the app more realistic and practical:
+Planned enhancements to continue expanding the application:
 
 - 🔒 **Access Controls (ACLs)** → SOC Analyst vs SOC Manager permissions  
-- 📊 **Reports & Dashboards** → e.g., *Incidents by Attack Type*, *Incidents by Priority*  
-- 🎛 **List Layout Optimization** → Cleaner columns (*Number*, *Short Description*, *Priority*, *State*, *Attack Type*)  
-- ➕ **Additional UI Policies** → e.g., *MITRE ID required for Malware cases*  
+- ⚡ **Flow Designer Automation** → notifications, escalations, and task routing  
+- 🎛 **List Layout Optimization** → cleaner columns such as *Number*, *Short Description*, *Priority*, *State*, and *Attack Type*  
+- ➕ **Additional UI Policies** → e.g., *MITRE Technique ID required for certain attack types*  
+- 📈 **More Advanced Reporting** → deeper operational and SOC-style analytics   
 
 ---
 

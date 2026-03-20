@@ -1,6 +1,6 @@
 # 🛡️ ServiceNow Security Incident Tracker
 
-A custom ServiceNow application built to simulate **SOC (Security Operations Center)** workflows and practice **CSA (Certified System Administrator)** concepts.
+A custom ServiceNow application built to simulate **SOC (Security Operations Center)** workflows and reinforce **CSA (Certified System Administrator)** concepts.
 
 This app extends **ITSM principles** into a cybersecurity-oriented use case — tracking, analyzing, and resolving security incidents.
 
@@ -12,27 +12,27 @@ This app extends **ITSM principles** into a cybersecurity-oriented use case — 
 Designed to support core SOC workflows with specialized fields:
 - **Attack type** (Phishing, Malware, Ransomware, etc.)
 - **MITRE Technique ID**
-- **Suspicious URL** & **IOC tracking**
+- **Suspicious URL** and **IOC tracking**
 - **Priority**, **Impact**, and **State**
 
 ### ⚙️ UI Policies
 Dynamic behavior to improve data accuracy:
-- When **Attack type = Phishing**, the **Email Header (raw)** field becomes **visible and mandatory**.
-- When **State = Resolved**, the **Resolution Notes** field becomes **required**.
-- When **Attack type = Other**, the **Other details** field is **shown**.
+- When **Attack type = Phishing**, the **Email Header (raw)** field becomes **visible and mandatory**
+- When **State = Resolved**, the **Resolution Notes** field becomes **required**
+- When **Attack type = Other**, the **Other details** field is **shown**
 
 ### 📂 Application Menu
 Organized for efficient navigation:
-- **Security Incidents** → List all incidents  
-- **My Incidents** → View incidents assigned to the logged-in user  
-- **New Security Incident** → Quickly create a new record  
+- **Security Incidents** → List all incidents
+- **My Incidents** → View incidents assigned to the logged-in user
+- **New Security Incident** → Quickly create a new record
 
 ### 🧭 Form Layout
 Structured into intuitive sections:
-1. **Incident Details** – Core ITSM fields  
-2. **Threat Information** – Cybersecurity enrichment fields  
-3. **Resolution Details** – Appears when the incident is resolved  
-4. **Tracking** – For internal notes or related indicators  
+- **Incident Details** – Core ITSM fields
+- **Threat Information** – Cybersecurity enrichment fields
+- **Resolution Details** – Appears when the incident is resolved
+- **Tracking** – For internal notes or related indicators
 
 ### 🧑‍💻 Role-Based Structure
 Includes roles for realistic SOC access control:
@@ -48,10 +48,10 @@ Created a custom SOC dashboard to visualize:
 - Incident lifecycle status
 - Resolved incidents by SOC team
 - Open critical incidents
-  
+
 ---
 
-## 📸 Screenshots (Current)
+## 📸 Screenshots
 
 | Screenshot | Description |
 |-------------|--------------|
@@ -63,6 +63,8 @@ Created a custom SOC dashboard to visualize:
 | ![Impersonation](./screenshots/06_Security_Incident_Form(Filled_Impersonating_Test_User).png) | Impersonation showing Test User view |
 | ![List View](./screenshots/07_Security_Incident_List_View.png) | List view summarizing all security incidents |
 | ![SOC Incident Overview Dashboard](./screenshots/08_SOC_Incident_Overview_Dashboard.png) | Custom dashboard showing trends, attack types, severity, lifecycle status, team resolution metrics, and open critical incidents |
+
+---
 
 ## 🚧 Planned Enhancements
 
@@ -77,12 +79,11 @@ Future improvements may include:
 ## 🛠 Next Steps
 
 Planned enhancements to continue expanding the application:
-
-- 🔒 **Access Controls (ACLs)** → SOC Analyst vs SOC Manager permissions  
-- ⚡ **Flow Designer Automation** → notifications, escalations, and task routing  
-- 🎛 **List Layout Optimization** → cleaner columns such as *Number*, *Short Description*, *Priority*, *State*, and *Attack Type*  
-- ➕ **Additional UI Policies** → e.g., *MITRE Technique ID required for certain attack types*  
-- 📈 **More Advanced Reporting** → deeper operational and SOC-style analytics   
+- 🔒 **Access Controls (ACLs)** → SOC Analyst vs SOC Manager permissions
+- ⚡ **Flow Designer Automation** → notifications, escalations, and task routing
+- 🎛 **List Layout Optimization** → cleaner columns such as *Number*, *Short Description*, *Priority*, *State*, and *Attack Type*
+- ➕ **Additional UI Policies** → for example, *MITRE Technique ID required for certain attack types*
+- 📈 **More Advanced Reporting** → deeper operational and SOC-style analytics
 
 ---
 
@@ -91,13 +92,12 @@ Planned enhancements to continue expanding the application:
 This project demonstrates how **ServiceNow** can be customized for **cybersecurity use cases** beyond ITSM — bridging IT operations with security operations.
 
 It highlights hands-on experience with:
-- Scoped application creation  
-- Custom tables, fields, and roles  
-- UI policy design and dynamic field logic  
-- Form and menu structuring  
-- Role-based visibility and impersonation testing  
+- Scoped application creation
+- Custom tables, fields, and roles
+- UI policy design and dynamic field logic
+- Form and menu structuring
+- Role-based visibility and impersonation testing
 
 ---
 
 ## 📂 Project Structure
-

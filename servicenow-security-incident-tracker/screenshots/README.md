@@ -27,6 +27,9 @@ Form viewed while impersonating “Test User” — demonstrates role-based visi
 ### 07_Security_Incident_List_View.png
 List view showing created security incidents and key columns like Number, Category, and Detection Source.
 
+### 08_SOC_Incident_Overview_Dashboard.png
+Custom SOC Incident Overview dashboard visualizing key metrics such as detection trends, incident severity, and open critical incidents.
+
 ---
 
 🔙 **Return to main project:**  

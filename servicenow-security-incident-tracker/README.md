@@ -60,7 +60,7 @@ Created a custom SOC dashboard to visualize:
 | ![Form Not Resolved](./screenshots/03_Security_Incident_Form(State_Not_Resolved).png) | Incident form in “New” state |
 | ![Form Resolved](./screenshots/04_Security_Incident_Form(State_Resolved_Displays_Resolution_Notes).png) | Resolution Notes field visible after resolving |
 | ![Filled Form](./screenshots/05_Security_Incident_Form(Filled).png) | Fully populated example record |
-| ![Impersonation](./screenshots/06_Security_Incident_Form(Filled_Impersonating_Test_User).png) | Impersonation showing Test User view |
+| ![Impersonation](./screenshots/06_Security_Incident_Form(Filled_Impersonating_TestUser).png) | Impersonation showing Test User view |
 | ![List View](./screenshots/07_Security_Incident_List_View.png) | List view summarizing all security incidents |
 | ![SOC Incident Overview Dashboard](./screenshots/08_SOC_Incident_Overview_Dashboard.png) | Custom dashboard showing trends, attack types, severity, lifecycle status, team resolution metrics, and open critical incidents |
 

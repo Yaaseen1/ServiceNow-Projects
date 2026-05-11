@@ -1,4 +1,5 @@
 🛡️ ServiceNow SecOps & Automated Intelligence Response Framework
+
 Status: 🧪 Active Testing & Optimization Phase
 
 A comprehensive, scoped ServiceNow application designed to bridge the gap between Security Operations (SecOps) and IT Service Management. This framework transforms raw security data into Actionable Intelligence through automated workflows, integrated Configuration Item (CI) tracking, and advanced analytics.

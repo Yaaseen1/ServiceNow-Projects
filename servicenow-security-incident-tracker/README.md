@@ -1,10 +1,7 @@
 🛡️ ServiceNow SecOps & Automated Intelligence Response Framework
-
 Status: 🧪 Active Testing & Optimization Phase
 
 A comprehensive, scoped ServiceNow application designed to bridge the gap between Security Operations (SecOps) and IT Service Management. This framework transforms raw security data into Actionable Intelligence through automated workflows, integrated Configuration Item (CI) tracking, and advanced analytics.
-
----
 
 🚀 Features Implemented
 🧩 Custom Security Incident Table
@@ -43,7 +40,7 @@ New Security Incident → Quickly create a new record.
 SecOps Analytics → Direct access to high-level intelligence dashboards.
 
 🧭 Form Layout & User Experience
-Structured into intuitive sections to reduce "Mean Time to Respond" (MTTR):
+Structured into intuitive sections to reduce Mean Time to Respond (MTTR):
 
 Incident Details – Core ITSM fields.
 
@@ -92,7 +89,6 @@ Monthly Executive Summaries: Automated delivery of dashboard analytics to leader
 Operational Health Checks: Periodic status updates on open critical incidents and team resolution metrics.
 
 Workflow Logic QA: Finalizing the "Automated Intelligence Response" triggers to ensure that critical CIs trigger immediate high-priority alerts without "alert fatigue."
-
 ---
 
 ## 📸 Screenshots

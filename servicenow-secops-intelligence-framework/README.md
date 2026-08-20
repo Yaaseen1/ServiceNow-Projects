@@ -1,8 +1,12 @@
 # ServiceNow SecOps & Automated Intelligence Response Framework
 
-**Status:** Optimization Phase
+**Status:** Complete ✅
 
 A scoped ServiceNow application that bridges Security Operations (SecOps) and IT Service Management. Raw security data is converted into actionable intelligence through automated workflows, AI-driven threat analysis, and a secure audit trail.
+
+## Demo
+
+[▶ Watch the full walkthrough](YOUR_YOUTUBE_LINK_HERE) — a guided tour through the intake form, AI triage, MITRE mapping, escalation flow, and the SOC dashboard.
 
 ## Core Features & Architecture
 
@@ -24,13 +28,17 @@ Purpose-built for core SOC workflows — tracks Attack Type (Phishing, Malware, 
 **Role-Based Access Control (RBAC)**
 Custom roles for SOC Analysts, SOC Managers, and restricted stakeholders simulate enterprise-grade data governance.
 
-## Current Status: Optimization Phase
+**SOC Dashboard**
+"SOC Incident Overview" dashboard with widgets for Incident Detection Trend (90 days), Incidents by Attack Type, Incidents by Severity, Incident Lifecycle Status, Resolved Incidents by SOC Team, and Critical Incidents in Open State.
 
-The foundational architecture is deployed. Current work is focused on:
+## What's Included
 
-- **Workflow QA & Tuning** — stress-testing Flow Designer triggers and ATF sequences so P1 escalations route correctly under concurrent load without alert fatigue
-- **Logging Fidelity** — refining `gs` API logs in Business Rules so all automated actions, including AI-triggered ones, are captured accurately for compliance audits
-- **Form Performance** — optimizing Client Scripts and UI Policies so form logic triggers without impacting platform performance
+- Fully deployed scoped application with a custom Security Incident table and Record Producer intake form
+- Gemini-powered AI triage flow that classifies incidents, maps them to MITRE ATT&CK, and flags prompt-injection/jailbreak attempts against the AI itself
+- VirusTotal URL analysis integration for suspicious link scanning
+- P1 escalation and notification workflows validated with ATF
+- SOC Incident Overview dashboard for reporting
+- Full audit trail via server-side Business Rules and `gs` API logging
 
 ## Repository Structure
 
@@ -56,4 +64,4 @@ The foundational architecture is deployed. Current work is focused on:
 
 ---
 
-**Portfolio:** [github.com/Yaaseen1](https://github.com/Yaaseen1)
+Portfolio: [github.com/Yaaseen1](https://github.com/Yaaseen1)

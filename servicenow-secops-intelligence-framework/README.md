@@ -6,7 +6,11 @@ A scoped ServiceNow application that bridges Security Operations (SecOps) and IT
 
 ## Demo
 
-[▶ Watch the full walkthrough](YOUR_YOUTUBE_LINK_HERE) — a guided tour through the intake form, AI triage, MITRE mapping, escalation flow, and the SOC dashboard.
+[▶ Watch the finale](https://youtu.be/8mQg__wuzi4) — the full walkthrough, tying together intake, AI triage, MITRE mapping, escalation, and the SOC dashboard.
+
+Want more detail?
+- [Deep dive: Securing Custom AI](https://youtu.be/W8k8ZqyxyMU) — a closer look under the hood
+- [Overview: Vulnerability Assessment Workflow](https://youtu.be/9X2_If6b-FI) — a shorter look at the AI vulnerability scenarios
 
 ## Core Features & Architecture
 

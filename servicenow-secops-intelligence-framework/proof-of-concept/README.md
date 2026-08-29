@@ -17,12 +17,14 @@ This folder houses video demonstrations of the custom scoped application, showin
 ### More Walkthroughs (hosted on YouTube, unlisted)
 *Longer demos too large for direct upload — hosted unlisted on the At Your Service Now YouTube channel.*
 
-- **SecOps Application Finale — Validating Intent Detection** — Final walkthrough validating intent detection across test scenarios, including a malicious URL case. [Watch](https://youtu.be/9X2_If6b-FI)
-- **Securing Custom AI — Part 2** — Continuation of the custom AI security hardening walkthrough. [Watch](https://youtu.be/W8k8ZqyxyMU)
 - **Securing the AI Workflow — Vulnerability Assessment** — Vulnerability assessment walkthrough, including an unescaped double-quotes injection scenario. [Watch](https://youtu.be/8mQg__wuzi4)
+- **Securing Custom AI — Part 2** — Continuation of the custom AI security hardening walkthrough. [Watch](https://youtu.be/W8k8ZqyxyMU)
+- **SecOps Application Finale — Validating Intent Detection** — Final walkthrough validating intent detection across test scenarios, including a malicious URL case. [Watch](https://youtu.be/9X2_If6b-FI)
 
 ## Key Architecture & Business Impact
 - **Frictionless UX** — end-users report threats via a minimal Service Portal Record Producer without needing to decipher complex ITIL terminology
 - **Asynchronous Processing** — a background Flow passes the payload via REST API to Google's Gemini LLM, ensuring zero front-end lag for the submitter
 - **Strict AI Parsing** — custom prompt engineering forces a structured JSON response, preventing chatty markdown or formatting errors
-- **Automated Data Mapping** — by the time the SOC team opens the incident queue, the MITRE ID (e.g., T1486 – Data Encrypted for Impact), incident title, and a technical summary are
+- **Automated Data Mapping** — by the time the SOC team opens the incident queue, the MITRE ID (e.g., T1486 – Data Encrypted for Impact), incident title, and a technical summary are already populated, bypassing manual administrative triage
+
+**Return to main project:** [ServiceNow SecOps & Automated Intelligence Response Framework](../)

@@ -1,28 +1,70 @@
 # Automated Asset Lifecycle Engine (AALE)
-*A Custom ServiceNow Scoped Application Bridging ITOM, ITAM, and ITSM*
+
+*A custom ServiceNow scoped application bridging ITOM, ITAM, and ITSM.*
+
+**Status: 🚧 In progress.** The ITOM-to-ITAM ingestion and lifecycle automation are working end to end. Real device discovery (MID Server) and the ITSM workflow layer (requests and approvals) are next.
 
 ## 📌 Overview
-The **Automated Asset Lifecycle Engine (AALE)** is a custom scoped application designed to act as an automated bridge between network visibility and asset compliance. 
+
+AALE is a scoped application that acts as an automated bridge between network visibility and asset compliance. It accepts device events, stores them, evaluates them against lease and warranty data, and sets each asset's lifecycle state automatically.
 
 ## 🎯 The Business Problem
-Enterprise organizations frequently struggle with the disconnect between network visibility (ITOM) and asset compliance (ITAM):
-* **ITOM** detects what is physically running on the network.
-* **ITAM** tracks what the organization has actually paid for, licensed, and authorized.
 
-When these two disciplines are siloed, it results in unrecorded software deployments, expired hardware operating without warranties, and significant financial audit risks.
+Enterprises struggle with the gap between network visibility (ITOM) and asset compliance (ITAM):
 
-## 💡 The Solution
-AALE listens for simulated machine alerts via custom APIs, checks the affected Configuration Item (CI) against custom financial and compliance data models, and automatically triggers zero-touch ITSM workflows.
+- **ITOM** detects what is physically running on the network.
+- **ITAM** tracks what the organization has paid for, licensed, and authorized.
 
-### Core Automation Scenarios
-1. **Unauthorized Software Harvesting:** If an ITOM payload detects unlicensed software on a `cmdb_ci_computer`, the engine triggers an automated workflow to seek managerial approval or assign a software removal task.
-2. **Automated Hardware Refresh:** If an infrastructure alert fires on a `cmdb_ci_server` that has passed its lease or warranty expiration, the system programmatically generates a Service Catalog request to the procurement team.
+When these are siloed, you get unrecorded software, hardware running past its lease or warranty, and audit risk.
 
-## 🛠️ Repository Contents & Technical Highlights
-This repository contains the architecture and codebase for the application, highlighting proficiency in the following areas:
+## ✅ What's Built
 
-* **Scoped Application Architecture:** Strict namespace isolation and upgrade-safe development.
-* **Custom CMDB Data Modeling:** Custom tables with complex reference fields tied directly to CMDB core classes (`cmdb_ci_server`, `cmdb_ci_computer`) extending CI capabilities.
-* **Scripted REST APIs:** Inbound endpoints engineered to accept and parse JSON payloads mimicking ITOM discovery events.
-* **Identification & Reconciliation Engine (IRE):** Programmatic routing of inbound data through ServiceNow's native identification rules to ensure database integrity and prevent duplicate CI creation.
-* **Flow Designer Orchestration:** Automated complex logic, approvals, and programmatic Service Catalog item generation (RITMs/Tasks) without human intervention.
+| Component | Details |
+|---|---|
+| **Scripted REST API** | `POST /api/x_1839598_automa_0/aale_inbound_events/events` validates `hostname` and `event_type` (`hardware_status` or `software_detected`), then writes the event to Hardware Stage. Returns `201` with the new record's sys_id, or `400` on bad input. |
+| **Hardware Stage table** | Staging table for inbound events (hostname, event type, CI class, serial number, lease/warranty expiration, detected software JSON, etc.). |
+| **Asset Lifecycle table** | The record of each asset and its lifecycle state. |
+| **Flow Designer flow** | "Process Inbound Hardware Data" triggers when a Hardware Stage record is created, creates an Asset Lifecycle record, and sets its state (rules below). |
+| **Business Rule** | Defaults Lifecycle State to *In Stock* if it is ever empty. |
+| **MID Server** | Installed, connected and validated on the instance, ready for Discovery. |
+
+### Lifecycle rules
+
+| Condition | Resulting state |
+|---|---|
+| Hardware event, lease or warranty expires within 30 days (empty dates ignored) | **Pending Refresh** |
+| Hardware event, dates not expiring soon or empty | **In Stock** |
+| Software-detected event | **Pending Review** |
+
+### Sample payload
+
+```json
+{
+  "hostname": "API-TEST-001",
+  "event_type": "hardware_status",
+  "ci_class": "cmdb_ci_computer",
+  "serial_number": "SN-API-TEST-001",
+  "lease_expiration": "2026-11-05"
+}
+```
+
+Expected response: `201 Created` with `"status": "accepted"`. The new asset appears in Asset Lifecycles as **Pending Refresh**.
+
+## 🗺️ Roadmap (next)
+
+**Up next**
+- **ITOM: MID Server + Discovery** feeding real device data into Hardware Stage (events are currently simulated through the REST API; the MID Server is already installed, connected and validated)
+- **ITSM layer:** auto-create a Service Catalog request to procurement for *Pending Refresh* assets, and an approval and software-removal workflow for *Pending Review* assets
+
+**Further out**
+- Identification & Reconciliation (IRE) for duplicate-safe CI handling
+- Reference fields linking lifecycle records to CMDB CIs
+- Scheduled sweep and notifications for expiring assets
+
+## 🛠️ Technical Highlights
+
+- Scoped application architecture with namespace isolation
+- Scripted REST API with input validation and proper HTTP status codes
+- Flow Designer logic with date-based branching
+- Staging-table pattern separating raw inbound data from managed asset records
+- Business Rule data safeguards

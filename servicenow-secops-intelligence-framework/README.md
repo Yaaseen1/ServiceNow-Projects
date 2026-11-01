@@ -12,6 +12,9 @@ Want more detail?
 - [Deep dive: Securing Custom AI](https://youtu.be/W8k8ZqyxyMU) — a closer look under the hood
 - [Overview: Vulnerability Assessment Workflow](https://youtu.be/9X2_If6b-FI) — a shorter look at the AI vulnerability scenarios
 
+## Requirements
+See [USER_STORIES.md](USER_STORIES.md) for the user stories and acceptance criteria.
+
 ## Core Features & Architecture
 
 **Automated Response & Escalation Workflows**

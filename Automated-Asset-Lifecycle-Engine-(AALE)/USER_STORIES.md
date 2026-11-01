@@ -2,44 +2,48 @@
 
 Automated Asset Lifecycle Engine (AALE) — **Status: In progress**
 
-These stories describe the requirements the application is being built to meet. See the [README](README.md) for the overview.
+These stories describe the requirements for the application. The first three are built; the rest are planned. See the [README](README.md) for the overview and roadmap.
 
 ---
 
-## 1. Lifecycle state management
+## Built
 
-**As an** asset manager, **I want** hardware records to move through defined lifecycle states (for example In Stock, Reviewed/Recycle) through a flow, **so that** asset data stays accurate without manual tracking.
+### 1. Inbound device events
+
+**As an** IT operations analyst, **I want** device events sent to a REST API that validates them, **so that** only clean data enters the system.
 
 **Acceptance criteria**
-- A valid state change updates the asset record.
-- An invalid transition is blocked and logged.
+- A valid hardware or software event returns 201 and is written to the Hardware Stage table.
+- A missing hostname or an invalid event type returns 400.
+
+### 2. Automatic lifecycle state
+
+**As an** asset manager, **I want** each device's lifecycle state set automatically from lease and warranty data, **so that** I don't track expirations by hand.
+
+**Acceptance criteria**
+- A hardware event with a lease or warranty expiring within 30 days sets the asset to Pending Refresh.
+- A hardware event with later or empty dates sets the asset to In Stock.
+- A software-detected event sets the asset to Pending Review.
+
+### 3. Data safeguards
+
+**As an** asset manager, **I want** every asset record to have a lifecycle state, **so that** no asset is left untracked.
+
+**Acceptance criteria**
+- If the lifecycle state is empty, it defaults to In Stock.
 
 ---
 
-## 2. Staging and validation
+## Planned
 
-**As an** asset manager, **I want** new hardware loaded into a staging table before it reaches the main record, **so that** bad or duplicate data stays out of the CMDB.
+### 4. Real device discovery
 
-**Acceptance criteria**
-- Staged records are validated before they are promoted.
-- Records that fail validation are flagged for review.
+**As an** IT operations lead, **I want** the MID Server and Discovery to feed real device data into Hardware Stage, **so that** the system runs on actual network data and not simulated events.
 
----
+### 5. Procurement and approval workflow
 
-## 3. Discovery and CMDB accuracy
+**As an** asset manager, **I want** a Service Catalog request created automatically for assets in Pending Refresh, and an approval workflow for assets in Pending Review, **so that** refreshes and software removals are handled without manual follow-up.
 
-**As an** IT operations lead, **I want** hardware data kept current through Discovery and the MID Server, **so that** incident and change decisions rely on accurate CMDB data.
+### 6. Duplicate-safe CI handling
 
-**Acceptance criteria**
-- Discovered hardware is reconciled without creating duplicates.
-- Stale records are flagged for review.
-
----
-
-## 4. Lifecycle visibility for support
-
-**As a** support analyst, **I want** to see an asset's lifecycle state on an incident, **so that** I can decide quickly between a repair and a replacement.
-
-**Acceptance criteria**
-- The lifecycle state is visible on the incident form.
-- The state updates when the asset record changes.
+**As a** CMDB owner, **I want** the Identification and Reconciliation Engine to prevent duplicate configuration items, **so that** the CMDB stays accurate.

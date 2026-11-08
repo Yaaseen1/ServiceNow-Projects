@@ -1,7 +1,7 @@
 <h1 align="center">Welcome to Yaaseen Sheriff's ServiceNow Projects</h1>
 
 <p align="center">
-  <b>Senior Business Analyst | ServiceNow ITSM</b><br>
+  <b>Senior Business Analyst | Senior Consultant | ServiceNow ITSM</b><br>
   Building, learning, and sharing along the way.
 </p>
 

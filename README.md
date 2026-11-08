@@ -35,4 +35,4 @@ Knowing the technical terminology and where everything lives matters. But what m
 
 ## Let's Connect
 
-Please look around, and I hope something here helps you. Feedback is always welcome: open an issue, or find me on LinkedIn: *(add your LinkedIn link here)*
+Please look around, and I hope something here helps you. Feedback is always welcome: open an issue, or find me on LinkedIn: *https://www.linkedin.com/in/yaaseen-sheriff/*

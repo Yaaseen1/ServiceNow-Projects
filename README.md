@@ -23,8 +23,8 @@ Knowing the technical terminology and where everything lives matters. But what m
 
 | Folder | What it is |
 |---|---|
-| [**Automated Asset Lifecycle Engine (AALE)**](Automated-Asset-Lifecycle-Engine-%28AALE%29) | A scoped ServiceNow app that takes in device events and automatically sets each asset's lifecycle state. Built to help me understand **ITAM and ITOM** and how they connect to ITSM (REST API, Flow Designer, MID Server and Discovery). The ITSM workflow layer is coming next. |
-| [**ServiceNow SecOps Intelligence Framework**](servicenow-secops-intelligence-framework) | A project for bringing the **SecOps module together with ITSM**. |
+| [**Automated Asset Lifecycle Engine (AALE)**](Automated-Asset-Lifecycle-Engine-%28AALE%29) | A scoped ServiceNow app that takes in device events, sets each asset’s lifecycle state, and automatically raises catalog requests and approvals. Built to help me understand ITAM and ITOM and how they connect to ITSM (REST API, Flow Designer, Service Catalog, MID Server and Discovery). The ITSM workflow layer is coming next. |
+| [**ServiceNow SecOps Intelligence Framework**](servicenow-secops-intelligence-framework) | A completed scoped app that bridges SecOps and ITSM: Gemini-powered AI triage with MITRE ATT&CK mapping, P1 escalation validated with ATF, and a SOC dashboard. Includes demo videos. |
 | [**ServiceNow Resources**](servicenow-resources) | Resources I'm gathering in the hope they help anyone on their own ServiceNow journey. Still growing, with more to come. |
 
 ## Where I'm Headed

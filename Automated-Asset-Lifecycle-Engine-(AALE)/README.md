@@ -98,6 +98,18 @@ Targets would be agreed with stakeholders. Candidate measures:
 
 Use a lease date within 30 days of today. Expected response: `201 Created`. The asset appears in Asset Lifecycles as Pending Refresh, and a Hardware Refresh Request (with tasks) appears in Requested Items, linked from the asset.
 
+## ⚠️ Known Limitations
+
+This is a portfolio build, so I'd rather be clear about where it stops:
+
+- **Discovery doesn't feed AALE yet.** Discovery works with the MID Server and populates the CMDB, but it doesn't yet create Hardware Stage events. The REST API is the event source for demos today.
+- **Lease and warranty dates are supplied, not discovered.** Discovery can't see them. In a real environment they'd come from procurement or an ITAM source.
+- **Single approver.** Software review goes to one approver (System Administrator), not a group, and there's no escalation or reminder.
+- **One refresh request per asset.** The flow runs once per record to prevent duplicates, so a second expiry on the same asset won't raise another request.
+- **The loop isn't closed.** Completing the refresh request doesn't yet update the asset's lifecycle state.
+- **No notifications.** Requests and approvals are created, but no emails or alerts go out.
+- **Not production-hardened.** There's no authentication model beyond basic REST access, no volume testing, and it runs on a developer instance.
+
 ## ▶️ Try it
 
 The app is built in a ServiceNow developer instance and backed up through ServiceNow Source Control. The application source is in a separate repository: **[servicenow-asset-engine](https://github.com/Yaaseen1/servicenow-asset-engine)**. This repository holds the documentation and test data.

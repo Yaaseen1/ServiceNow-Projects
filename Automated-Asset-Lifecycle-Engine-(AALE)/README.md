@@ -100,9 +100,9 @@ Use a lease date within 30 days of today. Expected response: `201 Created`. The 
 
 ## ▶️ Try it
 
-The app is built in a ServiceNow developer instance and backed up through ServiceNow Source Control. The application source is in a separate repository: **<<link to your source-control repo>>**. This repository holds the documentation and test data.
+The app is built in a ServiceNow developer instance and backed up through ServiceNow Source Control. The application source is in a separate repository: **[servicenow-asset-engine](https://github.com/Yaaseen1/servicenow-asset-engine)**. This repository holds the documentation and test data.
 
 1. Import the app from the source-control repository above into a ServiceNow developer instance.
 2. Run `seed/seed_hardware_stage.js` in Scripts - Background (scope: the AALE app).
 3. Or send your own event with the sample payload (REST API Explorer works).
-4. Open **Asset Lifecycles** to see states set
+4. Open **Asset Lifecycles** to see states set.

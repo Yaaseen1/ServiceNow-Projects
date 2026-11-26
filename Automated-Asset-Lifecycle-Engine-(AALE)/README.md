@@ -110,6 +110,10 @@ This is a portfolio build, so I'd rather be clear about where it stops:
 - **No notifications.** Requests and approvals are created, but no emails or alerts go out.
 - **Not production-hardened.** There's no authentication model beyond basic REST access, no volume testing, and it runs on a developer instance.
 
+## 🎥 Demos
+
+See the [demos folder](demos/) for the two walkthroughs, the payloads I used, and steps to reproduce them.
+
 ## ▶️ Try it
 
 The app is built in a ServiceNow developer instance and backed up through ServiceNow Source Control. The application source is in a separate repository: **[servicenow-asset-engine](https://github.com/Yaaseen1/servicenow-asset-engine)**. This repository holds the documentation and test data.
